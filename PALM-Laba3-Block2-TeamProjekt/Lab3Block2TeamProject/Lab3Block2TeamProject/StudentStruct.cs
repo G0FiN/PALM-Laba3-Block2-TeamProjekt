@@ -14,6 +14,5 @@ namespace Laba3Block2
 		public char informaticsMark;
 		public int scholarship;
 
-		
 	}
 }
