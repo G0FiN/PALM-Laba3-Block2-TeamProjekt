@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 
 namespace Laba3Block2
 {
@@ -43,7 +43,27 @@ namespace Laba3Block2
             return b;
         }
 
-       
+        //Середній бал всіх студентів
+        public static int CulcGeneralGPA(Student[] studs, int[] GPA)
+        {
+            int generalGPA = 0;
+            for (int i = 0; i < GPA.Length; i++)
+                generalGPA += GPA[i];
+            generalGPA = generalGPA / studs.Length;
+            Console.WriteLine("\n______________________________" +
+                "\nСередній бал всіх студентів: {0}", generalGPA);
+            return generalGPA;
+        }
+
+        //Прізвища студентів, середній бал яких більше, ніж загальний середній бал
+        public static void ResultVar14(Student[] studs, int[] GPA, int generalGPA)
+        {
+            Console.WriteLine("Студенти середній бал яких більше, ніж загальний середній бал:");
+            for (int i = 0; i < studs.Length; i++)
+                if (GPA[i] > generalGPA)
+                    Console.WriteLine("___Студент N{0}___\n" +
+                        "Прізвище: {1}\n" +
+                        "Середній бал: {2}\n", i + 1, studs[i].surName, GPA[i]);
         }
     }
 }
