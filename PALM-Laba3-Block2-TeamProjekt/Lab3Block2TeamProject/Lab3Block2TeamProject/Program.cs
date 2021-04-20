@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.IO;
 
 namespace Laba3Block2
@@ -7,7 +7,7 @@ namespace Laba3Block2
     {
         static void Main(string[] args)
         {
-            Student[] studs = ReadData("data.txt");
+            Student[] studs = ReadData("data1.txt");
             runMenu(studs);
         }
 
@@ -37,9 +37,9 @@ namespace Laba3Block2
                 for (int i = 0; i < studs.Length; i++)
                     Variant14.СonsolOutput(studs[i], i + 1);
 
-                int[] GPA = Variant14.CulcGPA(studs);
+                double[] GPA = Variant14.CulcGPA(studs);
 
-                int generalGPA = Variant14.CulcGeneralGPA(studs, GPA);
+                double generalGPA = Variant14.CulcGeneralGPA(studs, GPA);
 
                 Variant14.ResultVar14(studs, GPA, generalGPA);
                 //-----------Водянов-----------------------------------
@@ -50,7 +50,7 @@ namespace Laba3Block2
                 for (int i = 0; i < studs.Length; i++)
                     Variant17.СonsolOutput(studs[i]);
 
-                int[] MidMark = Variant17.MidleMark(studs);
+                double[] MidMark = Variant17.MidleMark(studs);
 
                 Variant17.ResultVar17(studs, MidMark);
                 //-----------Ткачов------------------------------------

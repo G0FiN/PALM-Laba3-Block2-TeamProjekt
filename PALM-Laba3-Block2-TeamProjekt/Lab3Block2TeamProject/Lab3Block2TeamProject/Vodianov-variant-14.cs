@@ -2,7 +2,7 @@ using System;
 
 namespace Laba3Block2
 {
-    class Variant14
+    partial class Variant14
     {
         //Виведення данних з data.txt 
         public static void СonsolOutput(Student student, int studsNum)
@@ -22,31 +22,31 @@ namespace Laba3Block2
         }
 
         //Середній бал кожного студента особисто
-        public static int[] CulcGPA(Student[] studs)
+        public static double[] CulcGPA(Student[] studs)
         {
-            int[] GPA = new int[studs.Length];
+            double[] GPA = new double[studs.Length];
             for (int i = 0; i < GPA.Length; i++)
-                GPA[i] = (CharToIntConverter(studs[i].mathematicsMark)
-                    + CharToIntConverter(studs[i].physicsMark)
-                    + CharToIntConverter(studs[i].informaticsMark)) / 3;
+                GPA[i] = (CharToDoubleConverter(studs[i].mathematicsMark)
+                    + CharToDoubleConverter(studs[i].physicsMark)
+                    + CharToDoubleConverter(studs[i].informaticsMark)) / 3;
 
             return GPA;
         }
 
         //Конвертує числа від 0 до 9 з типу char в тип int
-        public static int CharToIntConverter(char a)
+        public static double CharToDoubleConverter(char a)
         {
             if (a == '-')
                 a = '2';
 
-            int b = a - '0';
+            double b = a - '0';
             return b;
         }
 
         //Середній бал всіх студентів
-        public static int CulcGeneralGPA(Student[] studs, int[] GPA)
+        public static double CulcGeneralGPA(Student[] studs, double[] GPA)
         {
-            int generalGPA = 0;
+            double generalGPA = 0;
             for (int i = 0; i < GPA.Length; i++)
                 generalGPA += GPA[i];
             generalGPA = generalGPA / studs.Length;
@@ -56,7 +56,7 @@ namespace Laba3Block2
         }
 
         //Прізвища студентів, середній бал яких більше, ніж загальний середній бал
-        public static void ResultVar14(Student[] studs, int[] GPA, int generalGPA)
+        public static void ResultVar14(Student[] studs, double[] GPA, double generalGPA)
         {
             Console.WriteLine("Студенти середній бал яких більше, ніж загальний середній бал:");
             for (int i = 0; i < studs.Length; i++)
