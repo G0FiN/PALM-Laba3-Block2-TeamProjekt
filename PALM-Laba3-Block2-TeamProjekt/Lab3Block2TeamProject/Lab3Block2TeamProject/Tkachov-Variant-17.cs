@@ -1,8 +1,8 @@
 using System;
 
-namespace Laba3Block2v14
+namespace Laba3Block2
 {
-    class Variant17
+    partial class Variant17
     {
         public static void СonsolOutput(Student student)
         {
@@ -20,9 +20,9 @@ namespace Laba3Block2v14
                 student.mathematicsMark, student.physicsMark, student.informaticsMark, student.scholarship);
         }
 
-        public static int[] MidleMark(Student[] studs)
+        public static double[] MidleMark(Student[] studs)
         {
-            int[] MidMark = new int[studs.Length];
+            double[] MidMark = new double[studs.Length];
             for (int i = 0; i < MidMark.Length; i++)
                 MidMark[i] = (Convert(studs[i].mathematicsMark)
                     + Convert(studs[i].physicsMark)
@@ -31,15 +31,15 @@ namespace Laba3Block2v14
             return MidMark;
         }
 
-        public static int Convert(char a)
+        public static double Convert(char a)
         {
             if (a == '-')
                 a = '2';
 
-            int b = a - '0';
+            double b = a - '0';
             return b;
         }
-        public static void ResultVar17(Student[] studs, int[] MidMark)
+        public static void ResultVar17(Student[] studs, double[] MidMark)
         {
             Console.WriteLine("\nСтуденти середній бал яких більше, ніж 4.5");
             for (int i = 0; i < studs.Length; i++)
