@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.809.1
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lab3Block2TeamProject", "Lab3Block2TeamProject.csproj", "{D9BBEAC8-79D9-477F-829C-B2FF6A5E758B}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lab3Block2TeamProject", "Lab3Block2TeamProject\Lab3Block2TeamProject.csproj", "{D9BBEAC8-79D9-477F-829C-B2FF6A5E758B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -20,6 +20,6 @@ Global
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
-		SolutionGuid = {9D58A7FB-64B9-4DC7-9DE7-F32902EEF58A}
+		SolutionGuid = {0DBDF616-4029-4501-83F0-3E86501CCEA7}
 	EndGlobalSection
 EndGlobal

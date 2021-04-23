@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.IO;
 
 namespace Laba3Block2
@@ -7,7 +7,7 @@ namespace Laba3Block2
     {
         static void Main(string[] args)
         {
-            Student[] studs = ReadData("data1.txt");
+            Student[] studs = ReadData("data.txt");
             runMenu(studs);
         }
 
